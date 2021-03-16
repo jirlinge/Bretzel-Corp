@@ -1,5 +1,7 @@
 const cardContainer = document.getElementById("article-cards-container");
 
+let cartItems = [];
+
 laptopProducts.forEach(article => {
   cardContainer.insertAdjacentHTML('beforeend', `
     <div class="article-card-container">
@@ -15,7 +17,21 @@ laptopProducts.forEach(article => {
           <div class="article-pricetag">${article.price} €</div>
         </div>
       </div>
-      <button class="article-tocart-btn">Ajouter au panier</button>
+      <button class="article-tocart-btn" onclick="addToCart(${article.id})">Ajouter au panier</button>
     </div>
       `);
 });
+
+function addToCart(productId) {
+  console.log(productId);
+  let isDuplicate = false;
+  for (let i = 0; i < cartItems.length; i++) {
+    if (cartItems[i].id == productId) {
+      cartItems[i].quantity++;
+      isDuplicate = true;
+      break; // found existing item so quit out of the loop
+    }
+  }
+  if (!isDuplicate) cartItems.push({id: productId, quantity: 1});
+  console.log(cartItems);
+}
