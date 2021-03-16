@@ -54,13 +54,20 @@ const laptopProducts = [{
 
 laptopProducts.forEach(article => {
   cardContainer.insertAdjacentHTML('beforeend', `
-    <div class="card" style="width: 18rem;">
-      <img src="product_images/${article.pic_url[0]}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+    <div class="article-card-container">
+      <div class="article-picture-container">
+        <img src="product_images/${article.pic_url[0]}" alt="tech product" title="tech product">
       </div>
+      <div class="article-desc-price-container">
+        <div class="article-desc-container">
+          <h3 class="article-product-title">${article.product_name}</h3>
+          <p class="article-product-description"></p>
+        </div>
+        <div class="article-pricetag-container">
+          <div class="article-pricetag">${article.price} E</div>
+        </div>
+      </div>
+      <button class="article-tocart-btn">Ajouter au panier</button>
     </div>
-  `);
+      `);
 });
