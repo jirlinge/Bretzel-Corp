@@ -1,0 +1,13 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    display: flex;
+    justify-content:space-between;
+    list-style-type: none;
+}
+.menuNav{
+    background-color: rgb(25, 21, 77);
+    color: white;
+}
