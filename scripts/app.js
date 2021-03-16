@@ -64,7 +64,7 @@ laptopProducts.forEach(article => {
           <p class="article-product-description"></p>
         </div>
         <div class="article-pricetag-container">
-          <div class="article-pricetag">${article.price} E</div>
+          <div class="article-pricetag">${article.price} €</div>
         </div>
       </div>
       <button class="article-tocart-btn">Ajouter au panier</button>
