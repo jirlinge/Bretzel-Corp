@@ -13,6 +13,7 @@ body {
   
   background-image: url("../abstract-flat-background-free-vector.jpg") !important;
   font-family: arial;
+  background-size: cover;
 }
 
 
@@ -94,16 +95,26 @@ body {
 }
 
 @media (max-width: 750px) {
-  .article-pricetag  {
-    font-size: 12px;
+  .article-pricetag {
+      font-size: 14px ;
+      
     }
   }
-
+  @media (max-width: 675px) {
+    .article-pricetag {
+        font-size: 12px ;
+        
+  }
+}
 @media (max-width: 600px) {
-  .article-pricetag  {
-    font-size: 16px;
+  .article-pricetag {
+      font-size: 18px ;
+      
     }
   }
+  
+    
+
 
 .article-tocart-btn {
   height: 35px;
