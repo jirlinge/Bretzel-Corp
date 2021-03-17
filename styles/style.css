@@ -42,6 +42,11 @@ body {
     
   }
 }
+@media (min-width:600px){
+  .logo {
+    margin: auto;
+  }
+}
 
 
 .article-card-container {
@@ -165,6 +170,7 @@ ul{
 }
 
 #navbarNav li{
+  
   margin-right: 10px;
   padding-left:10px;
   border-radius: 16px 16px 16px 16px;
