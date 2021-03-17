@@ -15,6 +15,9 @@ function callContent(category){
     case 'mower':
       data = mowerProducts;
       break;
+    case 'camera':
+      data = cameraProducts;
+      break;
     default:
       data = laptopProducts;
   }

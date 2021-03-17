@@ -12,26 +12,30 @@
 <body>
 <div class="row no-gutters ">
   <div class="col-sm-10 col-12 no-gutters " id="MainContainer">
-    <div class="row no-gutters">
-      <div class="logo">NOTRE LOGO</div>
+    <div class="row">
+      <div class="logo">LOGO</div>
       <header>
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <div id="navB" class="container-fluid">
-            <ul class="nav nav-pills  mb-3" id="pills-tab" role="tablist">
-              <li class="nav-item" role="presentation ">
-                <button class="nav-link active" onclick="callContent('laptop')" id="pills-ordinateurs-tab" data-bs-toggle="pill" data-bs-target="#pills-ordinateurs" type="button" role="tab" aria-controls="pills-ordinateurs" aria-selected="true">Ordinateurs portable</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" onclick="callContent('smartphone')" id="pills-smartphones-tab" data-bs-toggle="pill" data-bs-target="#pills-smartphones" type="button" role="tab" aria-controls="pills-smartphones" aria-selected="false">Smartphones</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-tondeuse-tab" onclick="callContent('mower')" data-bs-toggle="pill" data-bs-target="#pills-tondeuse" type="button" role="tab" aria-controls="pills-tondeuse" aria-selected="false">Tondeuses à gazon</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-cameras-tab" data-bs-toggle="pill" data-bs-target="#pills-cameras" type="button" role="tab" aria-controls="pills-cameras" aria-selected="false">Appareils photo</button>
-              </li>
-            </ul>
-            <button href="http://">Panier</button>
+        <nav class="navbar navbar-expand-sm navbar-light">
+          <div class="container-fluid px-0">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <ul class="collapse navbar-collapse px-0" id="navbarNav">
+                <li class="nav-item col-sm-2 "id="item1">
+                  <a class="nav-link px-0" onclick="callContent('laptop')" href="#">Ordinateurs portable</a>
+                </li>
+                <li class="nav-item col-sm-2" id="item2">
+                  <a class="nav-link px-0" onclick="callContent('smartphone')" href="#">Smartphones</a>
+                </li>
+                <li class="nav-item col-sm-2" id="item3">
+                  <a class="nav-link px-0" onclick="callContent('mower')" href="#">Tondeuses à gazon</a>
+                </li>
+                <li class="nav-item col-sm-2" id="item4">
+                  <a class="nav-link px-0" onclick="callContent('camera')" href="#">Appareils photos</a>
+                </li>
+              </ul>
+              <div><button href="http://" style="position:absolute;right: 0;top: 8">Panier</button></div>
           </div>
         </nav>
       </header>
@@ -52,6 +56,7 @@
         <div class="col-3"><i class="bi bi-facebook"></i></div>
         <div class="col-3"><i class="bi bi-twitter"></i></div>
         <div class="col-3 mailIcon"><i class="bi bi-envelope"></i></div>
+      </div>
       </div>
         </div>
     </div>
