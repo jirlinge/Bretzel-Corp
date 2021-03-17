@@ -10,6 +10,7 @@ header{
 }
 
 body {
+  
   background-image: url("../abstract-flat-background-free-vector.jpg") !important;
   font-family: arial;
   background-size: cover;
@@ -64,7 +65,7 @@ body {
 }
 
 .article-desc-container {
-  flex: 2;
+  flex: 3;
   padding: 5px;
 }
 
@@ -73,7 +74,7 @@ body {
 }
 
 .article-pricetag-container {
-  flex: 1;
+  flex: 2;
   position: relative;
 }
 
