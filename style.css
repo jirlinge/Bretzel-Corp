@@ -2,12 +2,21 @@
     padding: 0;
     margin: 0;
 }
-ul{
+.navbar-brand{
+    width: 5%;
+}
+.tab-content{
+    justify-content: center;
     display: flex;
-    justify-content:space-between;
-    list-style-type: none;
 }
-.menuNav{
-    background-color: rgb(25, 21, 77);
-    color: white;
+.navbar-light{
+    background-color:#00b894;
 }
+.nav-link{
+    background-color: white;
+}
+/* ul{
+    display: flex;
+    justify-content: center;
+
+} */

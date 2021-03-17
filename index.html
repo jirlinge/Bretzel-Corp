@@ -9,17 +9,35 @@
 </head>
 <body>
     <header>
-        <div class='menuNav'>
-            <ul>
-                <li>Insert Logo Here</li>
-                <li>Company's name</li>
-                <li>Ordinateurs portable</li>
-                <li>Appareils photos</li>
-                <li>Smartphones</li>
-                <li>Tondeuses</li>
-                <li>Panier</li>
-            </ul>
-        </div>
+        <img class="navbar-brand" src="./pics/logo.png" alt="logo">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                
+                <ul class="nav nav-pills  mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-ordinateurs-tab" data-bs-toggle="pill" data-bs-target="#pills-ordinateurs" type="button" role="tab" aria-controls="pills-ordinateurs" aria-selected="true">Ordinateurs portable</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-smartphones-tab" data-bs-toggle="pill" data-bs-target="#pills-smartphones" type="button" role="tab" aria-controls="pills-smartphones" aria-selected="false">Smartphones</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-cameras-tab" data-bs-toggle="pill" data-bs-target="#pills-cameras" type="button" role="tab" aria-controls="pills-cameras" aria-selected="false">Cameras</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-tondeuse-tab" data-bs-toggle="pill" data-bs-target="#pills-tondeuse" type="button" role="tab" aria-controls="pills-tondeuse" aria-selected="false">Tondeuse</button>
+                    </li>
+                </ul>
+                <button href="http://">Panier</button>
+            </div>
+        </nav>
     </header>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-ordinateurs" role="tabpanel" aria-labelledby="pills-ordinateurs-tab">Laptop here</div>
+            <div class="tab-pane fade" id="pills-smartphones" role="tabpanel" aria-labelledby="pills-smartphones-tab">Nokia 3310 : Product of the year !</div>
+            <div class="tab-pane fade" id="pills-cameras" role="tabpanel" aria-labelledby="pills-cameras-tab">Nikon 3300 GX</div>
+            <div class="tab-pane fade" id="pills-tondeuse" role="tabpanel" aria-labelledby="pills-tondeuse-tab">John Deere</div>
+        </div>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>
 </html>
