@@ -2,7 +2,7 @@ const cardContainer = document.getElementById("article-cards-container");
 
 let cartItems = [];
 
-laptopProducts.forEach(article => {
+mowerProducts.forEach(article => {
   cardContainer.insertAdjacentHTML('beforeend', `
     <div class="article-card-container">
       <div class="article-picture-container">

@@ -51,7 +51,7 @@ const laptopProducts = [{
 }]
 
 
-const mowerProducts = [{
+const smartphoneProducts = [{
   id: 201,
   product_name: 'MSI - GF65 Thin 9SEXR-694XFR - Noir',
   price: 899.99,
