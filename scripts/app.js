@@ -2,25 +2,43 @@ const cardContainer = document.getElementById("article-cards-container");
 
 let cartItems = [];
 
-laptopProducts.forEach(article => {
-  cardContainer.insertAdjacentHTML('beforeend', `
-    <div class="article-card-container">
-      <div class="article-picture-container">
-        <img src="product_images/${article.pic_url[0]}" alt="tech product" title="tech product">
-      </div>
-      <div class="article-desc-price-container">
-        <div class="article-desc-container">
-          <h3 class="article-product-title">${article.product_name}</h3>
-          <p class="article-product-description"></p>
+function callContent(category){
+  console.log("calling content for category : " + category);
+  let data;
+  switch (category) {
+    case 'laptop':
+      data = laptopProducts;
+      break;
+    case 'smartphone':
+      data = smartphoneProducts;
+      break;
+    case 'mowers':
+      data = mowerProducts;
+      break;
+    default:
+      data = laptopProducts;
+  }
+  cardContainer.innerHTML = "";
+  data.forEach(article => {
+    cardContainer.insertAdjacentHTML('beforeend', `
+      <div class="article-card-container">
+        <div class="article-picture-container">
+          <img src="product_images/${article.pic_url[0]}" alt="tech product" title="tech product">
         </div>
-        <div class="article-pricetag-container">
-          <div class="article-pricetag">${article.price} €</div>
+        <div class="article-desc-price-container">
+          <div class="article-desc-container">
+            <h3 class="article-product-title">${article.product_name}</h3>
+            <p class="article-product-description"></p>
+          </div>
+          <div class="article-pricetag-container">
+            <div class="article-pricetag">${article.price} €</div>
+          </div>
         </div>
+        <button class="article-tocart-btn" onclick="addToCart(${article.id})">Ajouter au panier</button>
       </div>
-      <button class="article-tocart-btn" onclick="addToCart(${article.id})">Ajouter au panier</button>
-    </div>
       `);
-});
+  });
+}
 
 function addToCart(productId) {
   console.log(productId);
@@ -35,3 +53,5 @@ function addToCart(productId) {
   if (!isDuplicate) cartItems.push({id: productId, quantity: 1});
   console.log(cartItems);
 }
+
+callContent();
