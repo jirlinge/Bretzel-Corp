@@ -89,10 +89,31 @@ body {
   color: white;
   text-align: center;
   line-height: 35px;
-  font-size: 20px;
+  font-size: 18px;
   border: 3px 0 0 3px solid white;
   border-radius: 16px 0 0 0;
 }
+
+@media (max-width: 750px) {
+  .article-pricetag {
+      font-size: 14px ;
+      
+    }
+  }
+  @media (max-width: 675px) {
+    .article-pricetag {
+        font-size: 12px ;
+        
+  }
+}
+@media (max-width: 600px) {
+  .article-pricetag {
+      font-size: 18px ;
+      
+    }
+  }
+  
+    
 
 
 .article-tocart-btn {
