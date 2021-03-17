@@ -12,7 +12,7 @@ function callContent(category){
     case 'smartphone':
       data = smartphoneProducts;
       break;
-    case 'mowers':
+    case 'mower':
       data = mowerProducts;
       break;
     default:
