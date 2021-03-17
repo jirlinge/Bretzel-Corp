@@ -148,3 +148,24 @@ footer{
   color: #a45aef;
 }
 
+ul{
+  list-style-type: none;
+}
+#item1{
+  background-color: #e501b4;
+}
+#item2{
+  background-color: #e501b4;
+}
+#item3{
+  background-color: #e501b4;
+}
+#item4{
+  background-color: #e501b4;
+}
+
+#navbarNav li{
+  margin-right: 10px;
+  padding-left:10px;
+  border-radius: 16px 16px 16px 16px;
+}
