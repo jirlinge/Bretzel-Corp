@@ -2,15 +2,15 @@ const cardContainer = document.getElementById("article-cards-container");
 
 let cartItems = [];
 
-function callContent(category = 'laptop') {
+function callContent(category){
+  console.log("calling content for category : " + category);
   let data;
-  if (category = 'laptop') data = laptopProducts;
   switch (category) {
     case 'laptop':
       data = laptopProducts;
       break;
-    case 'smartphones':
-      data = smarthonesProducts;
+    case 'smartphone':
+      data = smartphoneProducts;
       break;
     case 'mowers':
       data = mowerProducts;
@@ -18,6 +18,7 @@ function callContent(category = 'laptop') {
     default:
       data = laptopProducts;
   }
+  cardContainer.innerHTML = "";
   data.forEach(article => {
     cardContainer.insertAdjacentHTML('beforeend', `
       <div class="article-card-container">
