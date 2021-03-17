@@ -9,20 +9,48 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <div class='menuNav'>
-            <ul>
-                <li>Insert Logo Here</li>
-                <li>Company's name</li>
-                <li>Ordinateurs portable</li>
-                <li>Appareils photos</li>
-                <li>Smartphones</li>
-                <li>Tondeuses</li>
-                <li>Panier</li>
-            </ul>
+<div class="row ">
+
+        <div class="col-sm-10 col-12 " id="MainContainer">
+            <div class="row">
+                <header>
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div id="navB" class="container-fluid">
+                            
+                            <ul class="nav nav-pills  mb-3" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                <button class="nav-link active" onclick="callContent('laptop')" id="pills-ordinateurs-tab" data-bs-toggle="pill" data-bs-target="#pills-ordinateurs" type="button" role="tab" aria-controls="pills-ordinateurs" aria-selected="true">Ordinateurs portable</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                <button class="nav-link" onclick="callContent('smartPhone')" id="pills-smartphones-tab" data-bs-toggle="pill" data-bs-target="#pills-smartphones" type="button" role="tab" aria-controls="pills-smartphones" aria-selected="false">Smartphones</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-cameras-tab" data-bs-toggle="pill" data-bs-target="#pills-cameras" type="button" role="tab" aria-controls="pills-cameras" aria-selected="false">Cameras</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-tondeuse-tab" data-bs-toggle="pill" data-bs-target="#pills-tondeuse" type="button" role="tab" aria-controls="pills-tondeuse" aria-selected="false">Tondeuse</button>
+                                </li>
+                            </ul>
+                            <button href="http://">Panier</button>
+                        </div>
+                    </nav>
+                </header>
+                
+            </div>
+            <div class="row">
+            <div id="article-cards-container">
+            
+
+            </div>
+            </div>
         </div>
-    </header>
-    <div id="article-cards-container" class="d-flex flex-wrap"></div>
+        
+    
+</div>
+</div>
+
+    
+    
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
  <script src="scripts/product_lists.js"></script>
  <script src="scripts/app.js"></script>
