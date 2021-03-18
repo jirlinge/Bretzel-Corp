@@ -4,6 +4,20 @@ header{
   padding-right: 0;
 }
 
+header .bi{
+  
+  font-size: 30px;
+  align-items: center;
+  
+}
+
+header button{
+  background-color:#C54D54 ;
+}
+
+
+
+
 .row.no-gutters{
   margin-right:0;
   margin-left: 0;
@@ -178,7 +192,7 @@ footer{
   margin-top: 20px;
 
 }
- .bi{
+ footer .bi{
   font-size: 50px;
   color: #262626;
 }
