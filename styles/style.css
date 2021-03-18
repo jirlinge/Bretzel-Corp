@@ -269,8 +269,19 @@ ul{
 
 .modal-card-container{
   width: 24%;
+  margin: 10px 10px 10px 10px ;
+  border-radius: 16px 16px 16px 16px ;
+  border : solid black;
 }
-
+.modal-card-minus-btn{
+  width: 20%;
+}
+.modal-card-plus-btn{
+  width: 20%;
+}
+.modal-card-close-btn{
+  width: 20%;
+}
 
 
 .modal-card-picbanner {
