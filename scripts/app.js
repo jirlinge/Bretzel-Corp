@@ -91,7 +91,7 @@ function callCartContent(){
           <div class="modal-card-quantity">${article.quantity}</div>
         </div>
         <div class="modal-card-interaction">
-          <div class="modal-card-pricetag">${article.price}</div>
+          <div class="modal-card-pricetag">${found.price} €/div>
           <button class="modal-card-minus-btn" onclick="increaseQuantity(${article.id})">+</button>
           <button class="modal-card-plus-btn" onclick="decreaseQuantity(${article.id})">-</button>
           <button class="modal-card-close-btn" onclick="removeItem(${article.id})">x</button>
