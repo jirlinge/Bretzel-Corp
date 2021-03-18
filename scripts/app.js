@@ -1,4 +1,6 @@
 const cardContainer = document.getElementById("article-cards-container");
+const modalCardContainer = document.getElementById("modal-cards-container");
+const fullProductList = laptopProducts.concat(smartphoneProducts, mowerProducts, cameraProducts);
 
 let cartItems = [];
 
@@ -7,7 +9,7 @@ function callContent(category){
   let data;
   switch (category) {
     case 'laptop':
-      data = laptopProducts;
+      data = laptopProducts
       break;
     case 'smartphone':
       data = smartphoneProducts;
@@ -63,6 +65,30 @@ function addToCart(productId) {
   if (!isDuplicate) cartItems.push({id: productId, quantity: 1});
   console.log(cartItems);
 }
+
+function callCartContent(){
+  modalCardContainer.innerHTML = "";
+  cartItems.forEach(article => {
+    const found = fullProductList.find(product => product.id == article.id);
+    console.log("found product is : " + found.pic_url);
+    modalCardContainer.insertAdjacentHTML('beforeend', `
+      <div class="modal-card-container">
+        <div class="modal-card-picbanner">
+          <img src="product_images/${found.pic_url[0]}" alt="image produit" title="image produit">
+          <h3>${found.product_name}</h3>
+          <div class="modal-card-quantity">${article.quantity}</div>
+        </div>
+        <div class="modal-card-interaction">
+          <div class="modal-card-pricetag">${article.price}</div>
+          <button class="modal-card-minus-btn">-</button>
+          <button class="modal-card-plus-btn">+</button>
+          <button class="modal-card-close-btn">x</button>
+        </div>
+      </div>
+    `
+    );
+    });
+  }
 
 callContent();
 

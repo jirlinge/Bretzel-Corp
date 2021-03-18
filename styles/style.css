@@ -32,10 +32,6 @@ body {
   background-size: cover;
 }
 
-
-
-
-
 #MainContainer{
   margin: auto;
 }
@@ -260,4 +256,44 @@ ul{
 
 #item4 {
   background-image: linear-gradient(to right, #9c4662 0%, #C54D54 51%, #bd95cf 100%);
+}
+
+/* Style Modal */
+#modalContainer {
+  width: 80%;
+}
+
+#modal-cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.modal-card-container {
+  width: 200px; 
+  margin: 20px;
+}
+
+.modal-card-picbanner {
+  position: relative;
+}
+
+.modal-card-picbanner>h3 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 12px;
+}
+
+.modal-card-quantity {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: palered;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.modal-card-picbanner>img {
+  width: 100%;
 }
