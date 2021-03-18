@@ -45,12 +45,7 @@ function callContent(category){
   });
 }
 
-
-
-
-
 function addToCart(productId) {
-  //document.getElementById("message").style.display="block";
   $("#message").slideToggle(500).delay(1000).fadeOut(1000);
   
   console.log(productId);
@@ -66,11 +61,28 @@ function addToCart(productId) {
   console.log(cartItems);
 }
 
+function increaseQuantity(productId) {
+  const targetProduct = cartItems.find(product => product.id == productId);
+  targetProduct.quantity++;
+  callCartContent();
+}
+
+function decreaseQuantity(productID) {
+  const targetProduct = cartItems.find(product => product.id == productID);
+  if (targetProduct.quantity > 0) targetProduct.quantity--;
+  callCartContent();
+}
+
+function removeItem(productID) {
+  const targetIndex = cartItems.findIndex(product => product.id == productID);
+  cartItems.splice(targetIndex, 1);
+  callCartContent();
+}
+
 function callCartContent(){
   modalCardContainer.innerHTML = "";
   cartItems.forEach(article => {
     const found = fullProductList.find(product => product.id == article.id);
-    console.log("found product is : " + found.pic_url);
     modalCardContainer.insertAdjacentHTML('beforeend', `
       <div class="modal-card-container col-12 col-sm-3">
         <div class="modal-card-picbanner">
@@ -80,13 +92,13 @@ function callCartContent(){
         </div>
         <div class="modal-card-interaction">
           <div class="modal-card-pricetag">${article.price}</div>
-          <button class="modal-card-minus-btn">-</button>
-          <button class="modal-card-plus-btn">+</button>
-          <button class="modal-card-close-btn">x</button>
+          <button class="modal-card-minus-btn" onclick="increaseQuantity(${article.id})">+</button>
+          <button class="modal-card-plus-btn" onclick="decreaseQuantity(${article.id})">-</button>
+          <button class="modal-card-close-btn" onclick="removeItem(${article.id})">x</button>
         </div>
       </div>
     `
-    );
+      );
     });
   }
 
