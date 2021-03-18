@@ -1,4 +1,6 @@
 const cardContainer = document.getElementById("article-cards-container");
+const modalCardContainer = document.getElementById("modal-cards-container");
+const fullProductList = laptopProducts.concat(smartphoneProducts, mowerProducts, cameraProducts);
 
 let cartItems = [];
 
@@ -7,7 +9,7 @@ function callContent(category){
   let data;
   switch (category) {
     case 'laptop':
-      data = laptopProducts;
+      data = laptopProducts
       break;
     case 'smartphone':
       data = smartphoneProducts;
@@ -44,6 +46,8 @@ function callContent(category){
 }
 
 function addToCart(productId) {
+  $("#message").slideToggle(500).delay(1000).fadeOut(1000);
+  
   console.log(productId);
   let isDuplicate = false;
   for (let i = 0; i < cartItems.length; i++) {
@@ -57,4 +61,50 @@ function addToCart(productId) {
   console.log(cartItems);
 }
 
+function increaseQuantity(productId) {
+  const targetProduct = cartItems.find(product => product.id == productId);
+  targetProduct.quantity++;
+  callCartContent();
+}
+
+function decreaseQuantity(productID) {
+  const targetProduct = cartItems.find(product => product.id == productID);
+  if (targetProduct.quantity > 0) targetProduct.quantity--;
+  callCartContent();
+}
+
+function removeItem(productID) {
+  const targetIndex = cartItems.findIndex(product => product.id == productID);
+  cartItems.splice(targetIndex, 1);
+  callCartContent();
+}
+
+function callCartContent(){
+  modalCardContainer.innerHTML = "";
+  cartItems.forEach(article => {
+    const found = fullProductList.find(product => product.id == article.id);
+    modalCardContainer.insertAdjacentHTML('beforeend', `
+      <div class="modal-card-container">
+        <div class="modal-card-picbanner">
+          <img src="product_images/${found.pic_url[0]}" alt="image produit" title="image produit">
+          <h3>${found.product_name}</h3>
+          <div class="modal-card-quantity">${article.quantity}</div>
+        </div>
+        <div class="modal-card-interaction">
+          <div class="modal-card-pricetag">${found.price} €</div>
+          <button class="modal-card-minus-btn" onclick="increaseQuantity(${article.id})">+</button>
+          <button class="modal-card-plus-btn" onclick="decreaseQuantity(${article.id})">-</button>
+          <button class="modal-card-close-btn" onclick="removeItem(${article.id})">x</button>
+        </div>
+      </div>
+    `
+      );
+    });
+  }
+
 callContent();
+
+
+
+
+
