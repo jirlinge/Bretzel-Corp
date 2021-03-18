@@ -163,6 +163,12 @@ body {
     }
   }
 
+  @media(min-width:800px){
+    #navbarNav li{
+      font-size: 10px;
+    }
+  } 
+
   @media(max-width:1520px){
     #navbarNav li{
       font-size: 12px;
@@ -225,11 +231,14 @@ ul{
 
 
 #navbarNav li{
-  
-  margin-right: 10px;
-  padding-left:10px;
+  font-size: 12px;
+  margin-right: 5px;
+  padding-left:5px;
   border-radius: 16px 16px 16px 16px;
+
 }
+
+
 
 #navbarNav li a{
   text-align: center;
