@@ -141,3 +141,19 @@ body {
 ul{
   list-style-type: none;
 }
+.container-fluid{
+  display: flex;
+  justify-content: space-between;
+}
+/*  */
+.nav-link:hover{
+  color:white;
+  background-color: teal
+}
+.nav-link{
+  color:rgb(25, 65, 45);
+}
+.navbar-toggler-icon:hover{
+  /*do something about it */
+}
+/* augmenter taille panier on small screens */
