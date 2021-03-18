@@ -85,12 +85,15 @@ function getTotalAmount() {
   //   fullProductList.find(product => product.id == cartItems[acc].id).price + current.price
   // });
   cartItems.forEach(article => {
-    total += fullProductList.find(product => product.id == article.id).price;
+    let found = fullProductList.find(product => product.id == article.id);
+    // total += fullProductList.find(product => product.id == article.id).price;
+    total += (found.price * article.quantity);
   });
   return total.toFixed(2);
 }
 
 function callCartContent(){
+  console.log("refresh content");
   modalCardContainer.innerHTML = "";
   cartItems.forEach(article => {
     const found = fullProductList.find(product => product.id == article.id);
