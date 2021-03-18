@@ -79,6 +79,17 @@ function removeItem(productID) {
   callCartContent();
 }
 
+function getTotalAmount() {
+  let total = 0;
+  // return cartItems.reduce((acc, current) => {
+  //   fullProductList.find(product => product.id == cartItems[acc].id).price + current.price
+  // });
+  cartItems.forEach(article => {
+    total += fullProductList.find(product => product.id == article.id).price;
+  });
+  return total.toFixed(2);
+}
+
 function callCartContent(){
   modalCardContainer.innerHTML = "";
   cartItems.forEach(article => {
@@ -100,11 +111,10 @@ function callCartContent(){
     `
       );
     });
+    modalCardContainer.insertAdjacentHTML('beforeend', `
+      <div>Montant total des produits : ${getTotalAmount()} €</div>
+      `);
   }
 
 callContent();
-
-
-
-
 
