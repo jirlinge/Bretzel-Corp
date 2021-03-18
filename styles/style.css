@@ -20,6 +20,8 @@ body {
 
 
 
+
+
 #MainContainer{
   margin: auto;
 }
@@ -141,7 +143,11 @@ body {
       
     }
   }
-  
+  @media(max-width:1520px){
+    #navbarNav li{
+      font-size: 12px;
+    }
+  }
     
 
 
@@ -209,6 +215,7 @@ ul{
   box-shadow: 0 0 20px #eee;
   border-radius: 10px;
  }
+
 
 /* Demo Stuff End -> */
 
