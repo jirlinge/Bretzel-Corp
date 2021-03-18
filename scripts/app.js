@@ -46,7 +46,6 @@ function callContent(category){
 }
 
 function addToCart(productId) {
-  //document.getElementById("message").style.display="block";
   $("#message").slideToggle(500).delay(1000).fadeOut(1000);
   
   console.log(productId);
@@ -63,7 +62,6 @@ function addToCart(productId) {
 }
 
 function increaseQuantity(productId) {
-  console.log("increaseQuantity() id is : " + productId);
   const targetProduct = cartItems.find(product => product.id == productId);
   targetProduct.quantity++;
   callCartContent();
@@ -85,7 +83,6 @@ function callCartContent(){
   modalCardContainer.innerHTML = "";
   cartItems.forEach(article => {
     const found = fullProductList.find(product => product.id == article.id);
-    console.log("found product is : " + found.pic_url);
     modalCardContainer.insertAdjacentHTML('beforeend', `
       <div class="modal-card-container">
         <div class="modal-card-picbanner">
@@ -101,7 +98,7 @@ function callCartContent(){
         </div>
       </div>
     `
-    );
+      );
     });
   }
 
