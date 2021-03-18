@@ -259,9 +259,7 @@ ul{
 }
 
 /* Style Modal */
-#modalContainer {
-  width: 80%;
-}
+
 
 #modal-cards-container {
   display: flex;
@@ -269,10 +267,11 @@ ul{
   flex-wrap: wrap;
 }
 
-.modal-card-container {
-  width: 200px; 
-  margin: 20px;
+.modal-card-container{
+  width: 24%;
 }
+
+
 
 .modal-card-picbanner {
   position: relative;

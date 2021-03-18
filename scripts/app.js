@@ -72,7 +72,7 @@ function callCartContent(){
     const found = fullProductList.find(product => product.id == article.id);
     console.log("found product is : " + found.pic_url);
     modalCardContainer.insertAdjacentHTML('beforeend', `
-      <div class="modal-card-container">
+      <div class="modal-card-container col-12 col-sm-3">
         <div class="modal-card-picbanner">
           <img src="product_images/${found.pic_url[0]}" alt="image produit" title="image produit">
           <h3>${found.product_name}</h3>
