@@ -168,7 +168,7 @@ body {
     }
   } 
 
-  @media(min-width:1520px){
+  @media(max-width:1520px){
     #navbarNav li{
       font-size: 12px;
     }
