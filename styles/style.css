@@ -112,6 +112,7 @@ body {
 
 .article-desc-container h3 {
   font-size: 12px;
+  
 }
 
 .article-pricetag-container {
@@ -134,6 +135,7 @@ body {
   border: 3px 0 0 3px solid white;
   border-radius: 16px 0 0 0;
 }
+
 
 @media (max-width: 750px) {
   .article-pricetag {
@@ -266,18 +268,84 @@ ul{
   flex-direction: row;
   flex-wrap: wrap;
 }
-
+.modal-card-pricetag{
+  width: 40%;
+  font-size: 12px;
+  background-color:#B3C3D9 ;
+  color: #262626;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+.modal-card-interaction{
+  display: flex;
+  flex-direction: row;
+}
 .modal-card-container{
   width: 24%;
-  margin: 10px 10px 10px 10px ;
+  margin: 5px 5px 5px 5px ;
   border-radius: 16px 16px 16px 16px ;
-  border : solid black;
+  border : solid 5px #B3C3D9;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+  0 12.5px 10px rgba(0, 0, 0, 0.035),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+  0 100px 80px rgba(0, 0, 0, 0.07)
+;
+}
+@media (max-width: 1250px) {
+  .modal-card-container {
+      width: 30% ;
+      
+    }
+  }
+@media (max-width: 990px) {
+  .modal-card-container {
+      width: 47% ;
+      
+    }
+  }
+@media (max-width: 530px) {
+  .modal-card-container {
+      width: 100% ;
+      
+    }
+  }
+
+
+.modal-card-container h3{
+  width: 70%;
+  padding-left: 5px;
+  padding-top: 5px;
+  color: #262626;
+  border-radius: 16px 16px 0px 0px;
+  
+}
+
+.modal-card-picbanner{
+  border-radius: 16px 16px 0px 0px;
+}
+.modal-card-container img{
+  border-radius: 16px 16px 0px 0px;
+}
+.modal-card-close-btn{
+  border-radius: 0px 0px 12px 0px;
+  background-color: #e29c4b;
+  border: solid 1px #B3C3D9;
+  color: white;
 }
 .modal-card-minus-btn{
   width: 20%;
+  background-color: #e29c4b;
+  border: solid 1px #B3C3D9;
+  color: white;
 }
 .modal-card-plus-btn{
   width: 20%;
+  background-color: #e29c4b;
+  border: solid 1px #B3C3D9;
+  color: white;
 }
 .modal-card-close-btn{
   width: 20%;
@@ -296,12 +364,18 @@ ul{
 }
 
 .modal-card-quantity {
+  width: 30p;
+  border-radius: 0px 12px 0px 0px;
+  color: white;
+  padding:5px 5px 5px 5px;
   position: absolute;
   right: 0;
   top: 0;
-  background-color: palered;
+  background-color: white;
   font-size: 16px;
   font-weight: bold;
+  background-color: #C54D54;
+  
 }
 
 .modal-card-picbanner>img {

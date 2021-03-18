@@ -84,14 +84,14 @@ function callCartContent(){
   cartItems.forEach(article => {
     const found = fullProductList.find(product => product.id == article.id);
     modalCardContainer.insertAdjacentHTML('beforeend', `
-      <div class="modal-card-container col-12 col-sm-3">
+      <div class="modal-card-container">
         <div class="modal-card-picbanner">
           <img src="product_images/${found.pic_url[0]}" alt="image produit" title="image produit">
           <h3>${found.product_name}</h3>
           <div class="modal-card-quantity">${article.quantity}</div>
         </div>
         <div class="modal-card-interaction">
-          <div class="modal-card-pricetag">${found.price} €/div>
+          <div class="modal-card-pricetag">${found.price} €</div>
           <button class="modal-card-minus-btn" onclick="increaseQuantity(${article.id})">+</button>
           <button class="modal-card-plus-btn" onclick="decreaseQuantity(${article.id})">-</button>
           <button class="modal-card-close-btn" onclick="removeItem(${article.id})">x</button>
