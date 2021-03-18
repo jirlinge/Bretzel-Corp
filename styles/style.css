@@ -60,7 +60,7 @@ body {
       }
     }
 
-  @media (min-width: 800px) {
+  @media (min-width: 1200px) {
     .article-card-container {
       width: 24%;
       }
@@ -157,6 +157,13 @@ body {
       
     }
   }
+@media (max-width: 980px) {
+  .article-pricetag {
+      font-size: 14px ;
+      
+    }
+  }
+
   @media(max-width:1520px){
     #navbarNav li{
       font-size: 12px;
