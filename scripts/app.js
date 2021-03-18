@@ -43,7 +43,14 @@ function callContent(category){
   });
 }
 
+
+
+
+
 function addToCart(productId) {
+  //document.getElementById("message").style.display="block";
+  $("#message").slideToggle(500).delay(1000).fadeOut(1000);
+  
   console.log(productId);
   let isDuplicate = false;
   for (let i = 0; i < cartItems.length; i++) {
@@ -58,3 +65,8 @@ function addToCart(productId) {
 }
 
 callContent();
+
+
+
+
+
