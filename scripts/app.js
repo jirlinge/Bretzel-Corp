@@ -102,7 +102,7 @@ function callCartContent(){
           <div class="modal-card-quantity">${article.quantity}</div>
         </div>
         <div class="modal-card-interaction">
-          <div class="modal-card-pricetag">${found.price} €</div>
+          <div class="modal-card-pricetag"><strong>${found.price} €</strong></div>
           <button class="modal-card-minus-btn" onclick="increaseQuantity(${article.id})">+</button>
           <button class="modal-card-plus-btn" onclick="decreaseQuantity(${article.id})">-</button>
           <button class="modal-card-close-btn" onclick="removeItem(${article.id})">x</button>
@@ -112,7 +112,7 @@ function callCartContent(){
       );
     });
     modalCardContainer.insertAdjacentHTML('beforeend', `
-      <div>Montant total des produits : ${getTotalAmount()} €</div>
+      <div id="cart-modal-totalamount">Montant total des produits : <strong>${getTotalAmount()} €</strong></div>
       `);
   }
 

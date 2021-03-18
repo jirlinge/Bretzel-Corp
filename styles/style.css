@@ -132,6 +132,7 @@ body {
   text-align: center;
   line-height: 35px;
   font-size: 16px;
+  font-weight: 500;
   border: 3px 0 0 3px solid white;
   border-radius: 16px 0 0 0;
 }
@@ -285,6 +286,7 @@ ul{
 .modal-card-pricetag{
   width: 40%;
   font-size: 12px;
+  font-weight: 500;
   background-color:#B3C3D9 ;
   color: #262626;
   padding-left: 5px;
@@ -394,4 +396,12 @@ ul{
 
 .modal-card-picbanner>img {
   width: 100%;
+}
+
+#cart-modal-totalamount {
+  width: 100%;
+  margin-top: 30px;
+  padding: 15px;
+  border-radius: 16px;
+  background-color: #B3C3D9;
 }
