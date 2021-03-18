@@ -165,8 +165,22 @@ body {
       font-size: 12px;
     }
   }
-    
 
+#cartButton {
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right, #e29c4b 0%, #762365 100%);
+  color: white;
+  padding: 5px 15px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+#cartButton>img {
+  display: inline-block;
+  width: 30px;
+  margin-left: 5px;
+}
 
 .article-tocart-btn {
   height: 35px;

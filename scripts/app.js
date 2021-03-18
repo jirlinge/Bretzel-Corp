@@ -79,6 +79,17 @@ function removeItem(productID) {
   callCartContent();
 }
 
+function getTotalAmount() {
+  let total = 0;
+  // return cartItems.reduce((acc, current) => {
+  //   fullProductList.find(product => product.id == cartItems[acc].id).price + current.price
+  // });
+  cartItems.forEach(article => {
+    total += fullProductList.find(product => product.id == article.id).price;
+  });
+  return total.toFixed(2);
+}
+
 function callCartContent(){
   modalCardContainer.innerHTML = "";
   cartItems.forEach(article => {
@@ -91,7 +102,7 @@ function callCartContent(){
           <div class="modal-card-quantity">${article.quantity}</div>
         </div>
         <div class="modal-card-interaction">
-          <div class="modal-card-pricetag">${found.price} €/div>
+          <div class="modal-card-pricetag">${found.price} €</div>
           <button class="modal-card-minus-btn" onclick="increaseQuantity(${article.id})">+</button>
           <button class="modal-card-plus-btn" onclick="decreaseQuantity(${article.id})">-</button>
           <button class="modal-card-close-btn" onclick="removeItem(${article.id})">x</button>
@@ -100,11 +111,10 @@ function callCartContent(){
     `
       );
     });
+    modalCardContainer.insertAdjacentHTML('beforeend', `
+      <div>Montant total des produits : ${getTotalAmount()} €</div>
+      `);
   }
 
 callContent();
-
-
-
-
 

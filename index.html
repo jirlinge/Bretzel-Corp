@@ -27,7 +27,7 @@
             </button>
             
             <ul class="collapse navbar-collapse px-0" id="navbarNav">
-                <li class="nav-item col-sm-2 "id="item1">
+                <li class="nav-item col-sm-2"id="item1">
                   <a class="nav-link px-0" onclick="callContent('laptop')" href="#">Ordinateurs portable</a>
                 </li>
                 <li class="nav-item col-sm-2" id="item2">
@@ -42,8 +42,8 @@
               </ul>
               <div id="button-container">
                 <button type="button" id="cartButton" onclick="callCartContent()" data-bs-toggle="modal" data-bs-target="#cartModal">
+                  <span>PANIER</span>
                   <img src="icons/basket.svg" alt="image de panier" title="image de panier">
-                  Panier
                 </button>
              </div>
 
@@ -71,6 +71,7 @@
           <div class="modal-body">
             <div id="modal-cards-container"></div>
           </div>
+          <div class="modal-footer" id="cart-modal-totalamount"></div>
         </div>    
       </div>    
     </div>    
